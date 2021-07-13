@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Calculate the final take-home bonus of a company employee using the criteria below
+<!-- Calculate the final take-home bonus of a company employee using the criteria below
 Age 18-20 => 5% of salary + Salary
 Age 21-30 => 10% of salary + Salary
 Age 31-50 => 20% of salary + Salary
@@ -16,9 +16,10 @@ Note: user enters their year of birth, and current salary using a prompt -->
 
 <div>
     <h3 id="age">Age : </h3>
-    <h3>userSalary: </h3>
-    <h3>Bonus : </h3>
-    <h3>totalSalary :</h3>
+    <h3 id="salary">salary :</h3>
+    <h3 id="bonus">Bonus :</h3>
+    <h3 id="totalSalary">totalSalary :</h3>
+    
 </div>
 
 <script>
@@ -28,31 +29,30 @@ const salary =()=>{
         let date= new Date()
         let currentYear = date.getFullYear()
         let age = currentYear - userYear
-        document.getElementById("age").innerHTML= "your age is " + age
-        console.log(age)
+        document.getElementById("age").innerHTML= "your age is " + age 
 
         let userSalary = parseInt(prompt("enter your salary amount"));
-        console.log(userSalary)
+        document.getElementById("salary").innerHTML= "your salary is " + userSalary
         let percentage;
         if (age >= 18 && age <= 20 ){
             bonus = userSalary * 5/100
-            console.log(bonus)
+            document.getElementById("bonus").innerHTML= "your bonus Salary is " + bonus
             let totalSalary = bonus + userSalary
-            console.log(totalSalary)
+            document.getElementById("totalSalary").innerHTML= "your salary is " + totalSalary
             return totalSalary
         }
         if (age >= 21 && age <= 30 ){
             bonus = userSalary * 10/100
-            console.log(bonus)
+            document.getElementById("bonus").innerHTML= "your bonus Salary is " + bonus
             let totalSalary = bonus + userSalary
-            console.log(totalSalary)
+            document.getElementById("totalSalary").innerHTML= "your salary is " + totalSalary
             return totalSalary
         }
         if (age >= 21 && age <= 50 ){
             bonus = userSalary * 20/100
-            console.log(bonus)
+            document.getElementById("bonus").innerHTML= "your bonus Salary is " + bonus
             let totalSalary = bonus + userSalary
-            console.log(totalSalary)
+            document.getElementById("totalSalary").innerHTML= "your salary is " + totalSalary
             return totalSalary
         }
         
