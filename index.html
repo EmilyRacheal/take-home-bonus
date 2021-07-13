@@ -14,7 +14,12 @@ Age 31-50 => 20% of salary + Salary
 Note: user enters their year of birth, and current salary using a prompt -->
 
 
-
+<div>
+    <h3 id="age">Age : </h3>
+    <h3>userSalary: </h3>
+    <h3>Bonus : </h3>
+    <h3>totalSalary :</h3>
+</div>
 
 <script>
 
@@ -23,6 +28,7 @@ const salary =()=>{
         let date= new Date()
         let currentYear = date.getFullYear()
         let age = currentYear - userYear
+        document.getElementById("age").innerHTML= "your age is " + age
         console.log(age)
 
         let userSalary = parseInt(prompt("enter your salary amount"));
